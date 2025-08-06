@@ -26,7 +26,7 @@ public class BirdController : MonoBehaviour
     {
         if (!gameManager || !gameManager.isGameOver)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
             {
                 rb.linearVelocity = Vector2.zero;
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
